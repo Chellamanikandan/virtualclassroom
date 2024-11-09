@@ -7,9 +7,9 @@ app.secret_key = 'temporary_key'
 
 def get_db_connection():
     return mysql.connector.connect(
-        host='virtualclassroom-db.cxuy6moa43xw.us-east-1.rds.amazonaws.com',
+        host='virtualdb.c5ke2i6eexpi.eu-north-1.rds.amazonaws.com',
         user='admin',
-        password='danielsolomon282005',
+        password='chella123',
         database='vc_db'
     )
 
@@ -55,8 +55,8 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     course_urls = [
-        'https://aws-virtualclassroom-s3.s3.amazonaws.com/python_code.pdf',
-        'https://aws-virtualclassroom-s3.s3.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
+        'https://virtuallbuck1.s3.eu-north-1.amazonaws.com/python_code.pdf',
+        'https://virtuallbuck1.s3.eu-north-1.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
     ]
     
     return render_template('dashboard.html', course_urls=course_urls)
